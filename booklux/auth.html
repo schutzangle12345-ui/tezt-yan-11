@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Private Jet & Luxury Services | Sign Up for BookLux</title>
+    <meta name="description" content="Join BookLux, the AI concierge for high net worth individuals. Book private jets, yachts, and villas with a single message. Sign up for elite travel management.">
+    <meta name="keywords" content="book private jet, private jet charter prices, luxury yacht charter booking, luxury villa rentals with concierge, ai luxury concierge">
+    <link rel="canonical" href="https://booklux.ai/auth.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://booklux.ai/auth.html">
+    <meta property="og:title" content="Book Private Jet & Luxury Services | Sign Up for BookLux">
+    <meta property="og:description" content="Experience the future of luxury travel. AI-driven booking for jets, yachts, and villas.">
+    <meta property="og:image" content="logo-tezt-yan-11.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://booklux.ai/auth.html">
+    <meta property="twitter:title" content="Book Private Jet & Luxury Services | Sign Up for BookLux">
+    <meta property="twitter:description" content="Experience the future of luxury travel. AI-driven booking for jets, yachts, and villas.">
+    <meta property="twitter:image" content="logo-tezt-yan-11.png">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "BookLux Authentication",
+      "description": "Sign in or create an account for BookLux AI luxury concierge services.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BookLux",
+        "logo": "logo-tezt-yan-11.png"
+      }
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --color-primary: #000000;
+            --color-primary-dark: #000000; /* Darkened by 15% of black is still black */
+            --color-background: #050505;
+            --color-surface: #0d0d0d;
+            --color-text: #ffffff;
+            --color-text-muted: #888888;
+            --color-border: #1f1f1f;
+            --color-accent: #FFFFFF;
+            --font-sans: 'Inter', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .logo-container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-text);
+        }
+
+        .nav-cta {
+            background: var(--color-accent);
+            color: var(--color-primary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Auth Page Styles */
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 160px 20px 120px;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 480px;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .auth-header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+        }
+
+        .auth-header p {
+            color: var(--color-text-muted);
+            font-size: 15px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            background: rgba(255,255,255,0.03);
+            padding: 4px;
+            border-radius: 10px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--color-text-muted);
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active {
+            background: var(--color-border);
+            color: var(--color-text);
+        }
+
+        /* Form Elements */
+        form {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        form.active {
+            display: flex;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text-muted);
+        }
+
+        input {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 14px;
+            color: var(--color-text);
+            font-family: var(--font-sans);
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--color-text-muted);
+        }
+
+        .submit-btn {
+            background: var(--color-accent);
+            color: var(--color-primary);
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 40px;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            max-width: 1200px;
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: var(--color-text);
+        }
+
+        .footer-col a {
+            display: block;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 12px;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            padding-top: 40px;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-text-muted);
+            font-size: 13px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--color-text-muted);
+            transition: var(--transition);
+        }
+
+        .social-icons svg:hover {
+            fill: var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .auth-card { padding: 30px 20px; }
+        }
+    </style>
+  <base href="/booklux/" />
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo-container">
+            <img src="logo-tezt-yan-11.png" alt="BookLux logo" style="height:40px;object-fit:contain">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="auth.html" style="color: var(--color-text)">Sign In</a>
+            <a href="auth.html" class="nav-cta">Get Started</a>
+        </div>
+    </nav>
+
+    <main class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Welcome to BookLux</h1>
+                <p>Manage your luxury lifestyle through elite AI.</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn" onclick="switchTab('signin')" id="btn-signin">Sign In</button>
+                <button class="tab-btn active" onclick="switchTab('signup')" id="btn-signup">Sign Up</button>
+            </div>
+
+            <!-- Sign Up Tab (Default Active) -->
+            <form id="signup-form" data-backend="signup" class="active">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" required placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" minlength="6" required placeholder="••••••••">
+                </div>
+                <input type="hidden" name="role" value="user">
+                <button type="submit" class="submit-btn">Create Account</button>
+                <p data-success style="display:none; color: #4ade80; font-weight: bold; margin-top: 1rem; text-align: center; font-size: 14px;">
+                    Registration successful! Please login.
+                </p>
+            </form>
+
+            <!-- Sign In Tab -->
+            <form id="signin-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••">
+                </div>
+                <button type="button" class="submit-btn">Access Account</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#">Private Jets</a>
+                <a href="#">Yacht Charter</a>
+                <a href="#">Luxury Villas</a>
+                <a href="#">Private Chefs</a>
+            </div>
+            <div class="footer-col">
+                <h4>Guides</h4>
+                <a href="#">Pricing Guide</a>
+                <a href="#">Destinations</a>
+                <a href="#">Travel Policies</a>
+                <a href="#">Safety Basics</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Partners</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 BookLux. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zM10 9.658l3.333 2.342L10 14.342V9.658z"/></svg></a>
+                <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+            const signupForm = document.getElementById('signup-form');
+            const signinForm = document.getElementById('signin-form');
+            const signupBtn = document.getElementById('btn-signup');
+            const signinBtn = document.getElementById('btn-signin');
+
+            if (tab === 'signup') {
+                signupForm.classList.add('active');
+                signinForm.classList.remove('active');
+                signupBtn.classList.add('active');
+                signinBtn.classList.remove('active');
+            } else {
+                signinForm.classList.add('active');
+                signupForm.classList.remove('active');
+                signinBtn.classList.add('active');
+                signupBtn.classList.remove('active');
+            }
+        }
+
+        // Backend simulation for the Success Message
+        const signupForm = document.getElementById('signup-form');
+        signupForm.addEventListener('submit', function(e) {
+            // For production, the data-backend="signup" would be handled by a script
+            // This is the simulation of the "success is true" logic requested
+            e.preventDefault();
+            
+            const successMsg = signupForm.querySelector('[data-success]');
+            successMsg.style.display = 'block';
+
+            setTimeout(() => {
+                switchTab('signin');
+                successMsg.style.display = 'none';
+                signupForm.reset();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
