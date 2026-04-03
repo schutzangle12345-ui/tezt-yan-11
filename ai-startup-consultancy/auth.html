@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO METADATA -->
+    <title>AI Startup Consultant Sign Up | AI Startup Consultancy</title>
+    <meta name="description" content="Sign up for AI Startup Consultancy to launch your AI business. Expert advisory for AI founders on pricing, GTM strategy, and technical scale.">
+    <link rel="canonical" href="https://aistartupconsultancy.com/auth.html">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Startup Consultant Sign Up | AI Startup Consultancy">
+    <meta property="og:description" content="Join the leading consultancy for AI founders. Scale your product and define your GTM strategy with expert guidance.">
+    <meta property="og:image" content="logo-tezt-yan-11.png">
+    <meta property="og:url" content="https://aistartupconsultancy.com/auth.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Startup Consultant Sign Up | AI Startup Consultancy">
+    <meta name="twitter:description" content="Scale your AI business with expert consultancy. Sign up today.">
+    <meta name="twitter:image" content="logo-tezt-yan-11.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Sign In - AI Startup Consultancy",
+      "description": "Authentication page for AI Startup Consultancy clients and founders.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AI Startup Consultancy",
+        "logo": "https://aistartupconsultancy.com/logo-tezt-yan-11.png"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --color-primary: #D81F26;
+            --color-primary-dark: #B71A20;
+            --color-background: #FCFCFC;
+            --color-surface: #FFFFFF;
+            --color-text: #1A1A1A;
+            --color-text-muted: #666666;
+            --color-border: #E5E5E5;
+            --color-accent: #FFFFFF;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 72px;
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .btn-nav {
+            background: var(--color-text);
+            color: var(--color-accent);
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-nav:hover {
+            background: #000000;
+        }
+
+        /* Auth Container */
+        main {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px 60px;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 480px;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            box-shadow: var(--shadow-subtle);
+            padding: 40px;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .auth-header img {
+            margin-bottom: 16px;
+        }
+
+        .auth-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+        }
+
+        /* Tabs */
+        .tab-group {
+            display: flex;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 32px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            background: none;
+            border: none;
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .tab-btn.active {
+            color: var(--color-primary);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--color-primary);
+        }
+
+        /* Form Styling */
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--color-text);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(216, 31, 38, 0.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--color-text);
+            color: var(--color-accent);
+            border: none;
+            border-radius: var(--radius);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 12px;
+        }
+
+        .btn-submit:hover {
+            background: #000000;
+        }
+
+        .success-msg {
+            background: #f0fff4;
+            border: 1px solid #c6f6d5;
+            color: #2f855a;
+            padding: 12px;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .form-footer {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            max-width: 300px;
+            color: var(--color-text-muted);
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--color-border);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--color-text-muted);
+            transition: fill 0.2s;
+            cursor: pointer;
+        }
+
+        .social-icons svg:hover {
+            fill: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .auth-card { padding: 30px 20px; }
+        }
+    </style>
+  <base href="/ai-startup-consultancy/" />
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="logo-tezt-yan-11.png" alt="AI Startup Consultancy logo" style="height:40px;object-fit:contain">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="auth.html" style="color: var(--color-primary)">Sign In</a>
+            <a href="auth.html" class="btn-nav">Get Started</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Founder Access</h1>
+                <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 4px;">Launch your AI business today</p>
+            </div>
+
+            <div class="tab-group">
+                <button class="tab-btn" id="tab-signin" onclick="switchTab('signin')">Sign In</button>
+                <button class="tab-btn active" id="tab-signup" onclick="switchTab('signup')">Sign Up</button>
+            </div>
+
+            <!-- SIGN UP TAB -->
+            <div id="form-signup" class="auth-form active">
+                <form data-backend="signup" onsubmit="handleSignup(event)">
+                    <input type="hidden" name="role" value="user">
+                    
+                    <div class="form-group">
+                        <label for="signup-email">Business Email</label>
+                        <input type="email" id="signup-email" name="email" placeholder="name@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="Min. 6 characters" minlength="6" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Create Account</button>
+                    
+                    <p id="signup-success" class="success-msg" style="display:none;">
+                        Registration successful! Please login.
+                    </p>
+                </form>
+                <div class="form-footer">
+                    By joining, you agree to our terms and privacy policy regarding AI advisory services.
+                </div>
+            </div>
+
+            <!-- SIGN IN TAB -->
+            <div id="form-signin" class="auth-form">
+                <form onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="signin-email">Business Email</label>
+                        <input type="email" id="signin-email" name="email" placeholder="name@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Sign In</button>
+                </form>
+                <div class="form-footer">
+                    <a href="#" style="color: var(--color-text-muted); text-decoration: none;">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="logo-tezt-yan-11.png" alt="AI Startup Consultancy logo" style="height:35px;object-fit:contain">
+                <p>Specialized consultancy for AI founders. From ICP definition to technical scaling and GTM playbooks.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Consultancy</h4>
+                <ul>
+                    <li><a href="index.html">GTM Strategy</a></li>
+                    <li><a href="index.html">Pricing Strategy</a></li>
+                    <li><a href="index.html">Technical Advisory</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="auth.html">Sign In</a></li>
+                    <li><a href="auth.html">Founder Portal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 AI Startup Consultancy. All rights reserved.</p>
+            <div class="social-icons">
+                <!-- Twitter -->
+                <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                <!-- LinkedIn -->
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+            const signupBtn = document.getElementById('tab-signup');
+            const signinBtn = document.getElementById('tab-signin');
+            const signupForm = document.getElementById('form-signup');
+            const signinForm = document.getElementById('form-signin');
+
+            if (tab === 'signin') {
+                signinBtn.classList.add('active');
+                signupBtn.classList.remove('active');
+                signinForm.classList.add('active');
+                signupForm.classList.remove('active');
+            } else {
+                signupBtn.classList.add('active');
+                signinBtn.classList.remove('active');
+                signupForm.classList.add('active');
+                signinForm.classList.remove('active');
+            }
+        }
+
+        async function handleSignup(event) {
+            event.preventDefault();
+            const form = event.target;
+            const successMsg = document.getElementById('signup-success');
+            
+            // Simulating API call success for demonstration
+            // In production, the backend would handle the actual data-backend="signup" post
+            successMsg.style.display = 'block';
+            
+            setTimeout(() => {
+                switchTab('signin');
+                successMsg.style.display = 'none';
+                form.reset();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
